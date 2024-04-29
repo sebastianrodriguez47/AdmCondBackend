@@ -16,6 +16,15 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICasaRepository, CasaRepository>();
 builder.Services.AddScoped<IJefeHogarRepository, JefeHogarRepository>();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Politica", app =>
+    {
+        app.AllowAnyOrigin()
+          .AllowAnyHeader()
+          .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -27,6 +36,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("Politica");
 
 app.UseAuthorization();
 
