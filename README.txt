@@ -1,4 +1,4 @@
-#Hola, bienvenido a mi proyecto
+Hola, bienvenido a mi proyecto.
 
 1.- Primero que todo dentro de la raiz de este proyecto cree una carpeta llamada
 "ArchivosRevision" en ella está el diagrama de clases, otro llamado "Pruebas",
